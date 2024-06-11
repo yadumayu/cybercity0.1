@@ -101,11 +101,11 @@
 							echo "<td>" . $row["firstname"] . "</td>";
 							echo "<td>" . $row["patronymic"] . "</td>";
 							echo "<td>" . $row["dob"] . "</td>";
-							echo "<td><a href='UpdateInfo.php?id=" . $row["id"] . "'>Изменить</a></td>";
+							echo "<td><a href='UpdateInfo.php?id=" . $row["id"] . "'>Change</a></td>";
 							echo "<td>
 									<form action='DeleteUser.php' method='post'>
 										<input type='hidden' name='id' value='" . $row["id"] . "' />
-										<input type='submit' value='Удалить'>
+										<input type='submit' value='Delete'>
 									</form>
 								</td>";
 							echo "</tr>";
@@ -115,7 +115,7 @@
 					echo "</table>";
 					$result->free();
 				} else{
-					echo "Ошибка: " . $DataBase->error;
+					echo "Error: " . $DataBase->error;
 				}
 
 

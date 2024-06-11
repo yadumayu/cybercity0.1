@@ -8,7 +8,6 @@ require_once "config.php";
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Замена</title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -40,21 +39,21 @@ require_once "config.php";
 									$patronymic = $row["patronymic"];
 									$dob = $row["dob"];
 								}
-								echo "<h3>Обновление пользователя</h3>
+								echo "<h3>User Update</h3>
 								<form method='post'>
 									<input type='hidden' name='id' value='$userid' />
-									<p>Логин: <input type='text' name='username' value='$username' /></p>
-									<p>Статус: <input type='text' name='status' value='$status' /></p>
-									<p>Фамилия: <input type='text' name='surname' value='$surname' /></p>
-									<p>Имя: <input type='text' name='firstname' value='$firstname' /></p>
-									<p>Отчество: <input type='text' name='patronymic' value='$patronymic' /></p>
-									<p>Дата рождения: <input type='date' name='dob' value='$dob' /></p>
-									<input type='submit' value='Сохранить'>
+									<p>Login: <input type='text' name='username' value='$username' /></p>
+									<p>Status: <input type='text' name='status' value='$status' /></p>
+									<p>Surname: <input type='text' name='surname' value='$surname' /></p>
+									<p>Name: <input type='text' name='firstname' value='$firstname' /></p>
+									<p>Middle name: <input type='text' name='patronymic' value='$patronymic' /></p>
+									<p>Date of birth: <input type='date' name='dob' value='$dob' /></p>
+									<input type='submit' value='Save'>
 								</form>";
 							}
 						}
 						else{
-							echo "<div>Пользователь не найден</div>";
+							echo "<div>The user was not found</div>";
 						}
 						mysqli_free_result($result);
 					} 
@@ -81,11 +80,11 @@ require_once "config.php";
 						if($result = mysqli_query($DataBase, $sql)){
 							header("Location: AdminInfo.php");
 						} else{
-							echo "Ошибка: " . mysqli_error($DataBase);
+							echo "Error: " . mysqli_error($DataBase);
 						}
 					}
 					else{
-						echo "Некорректные данные";
+						echo "Incorrect data";
 					}
 				?>
 					<a href="../source/MainPage.php">Go back</a>

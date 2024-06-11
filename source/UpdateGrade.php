@@ -8,7 +8,6 @@ require_once "config.php";
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Замена</title>
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -39,20 +38,20 @@ require_once "config.php";
 										$Chemistry = $row["Chemistry"];
 										$History = $row["History"];
 									}
-									echo "<h3>Обновления оценок</h3>
+									echo "<h3>Rating updates</h3>
 									<form method='post'>
 										<input type='hidden' name='id' value='$userid' />
-										<p>Алгебра: <input type='number' name='algebra' value='$algebra' /></p>
-										<p>Русский язык: <input type='number' name='russian_language' value='$russian_language' /></p>
-										<p>Биология: <input type='number' name='Biology' value='$Biology' /></p>
-										<p>Химия: <input type='number' name='Chemistry' value='$Chemistry' /></p>
-										<p>История: <input type='number' name='History' value='$History' /></p>
-										<input type='submit' value='Сохранить'>
+										<p>Algebra: <input type='number' name='algebra' value='$algebra' /></p>
+										<p>Russian: <input type='number' name='russian_language' value='$russian_language' /></p>
+										<p>Biology: <input type='number' name='Biology' value='$Biology' /></p>
+										<p>Chemistry: <input type='number' name='Chemistry' value='$Chemistry' /></p>
+										<p>History: <input type='number' name='History' value='$History' /></p>
+										<input type='submit' value='Save'>
 									</form>";
 								}
 							}
 							else{
-								echo "<div>Пользователь не найден</div>";
+								echo "<div>The user was not found</div>";
 							}
 							mysqli_free_result($result);
 						} 
@@ -79,7 +78,7 @@ require_once "config.php";
 							}
 						}
 						else{
-							echo "Некорректные данные";
+							echo "Incorrect data";
 						}
 					?>
 					<a href="../source/MainPage.php">Go back</a>

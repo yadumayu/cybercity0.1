@@ -44,7 +44,7 @@
 								echo "<td>" . $row["Biology"] . "</td>";
 								echo "<td>" . $row["Chemistry"] . "</td>";
 								echo "<td>" . $row["History"] . "</td>";
-								echo "<td><a href='UpdateGrade.php?id=" . $row["id"] . "'>Изменить</a></td>";
+								echo "<td><a href='UpdateGrade.php?id=" . $row["id"] . "'>Change</a></td>";
 							echo "</tr>";
 						}
 						

@@ -10,7 +10,7 @@ if(isset($_POST["id"]))
          
         header("Location: AdminInfo.php");
     } else{
-        echo "Ошибка: " . mysqli_error($DataBase);
+        echo "Error: " . mysqli_error($DataBase);
     }
     mysqli_close($DataBase);    
 }

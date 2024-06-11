@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Мои оценки</title>
     <meta charset="utf-8" />
     
     <link rel="stylesheet" href="main.css">
@@ -58,11 +57,11 @@
                         }
                         $stmt->close();
                     } else {
-                        echo "Ошибка: " . $DataBase->error;
+                        echo "Error: " . $DataBase->error;
                     }
                     $DataBase->close();
                 } else {
-                    echo "<p>Пожалуйста, войдите в систему, чтобы посмотреть ваши оценки.</p>";
+                    echo "<p>Please log in to view your scores.</p>";
                 }
                 ?>
                 <a href="../source/MainPage.php">Go back</a>
