@@ -247,3 +247,4 @@ input:checked + .slider:before {
     margin-bottom: 5px;
     color: #555; /* Color of the label text */
 }
+
