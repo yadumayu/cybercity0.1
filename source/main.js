@@ -16,3 +16,6 @@ document.getElementById('themeToggle').addEventListener('change', function() {
         localStorage.setItem('theme', 'light');
     }
 });
+if(currentTheme === 'dark'){
+    document.getElementById('themeToggle').checked = true;
+    }
